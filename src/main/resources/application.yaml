@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: deneme-spring
+  profiles:
+    active: localhost
+  main:
+    allow-bean-definition-overriding: true
+info:
+  component: Deneme Spring
+
+---
+spring:
+  profiles: localhost
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform:  org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        default_schema: stock_management
+
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/stock_management"
+    username: postgres
+    password: Asd@123
+
