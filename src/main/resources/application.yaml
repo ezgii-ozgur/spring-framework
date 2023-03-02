@@ -7,6 +7,13 @@ spring:
     allow-bean-definition-overriding: true
 info:
   component: Deneme Spring
+#
+#server:
+#  port: 9788
+logging:
+  level:
+    root: off
+    com.example: debug
 
 ---
 spring:
